@@ -3,16 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <title>Simple Webpage</title>
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background: linear-gradient(to right, #ece9e6, #ffffff);
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    
+        h1 {
+          color: #333;
+          margin-bottom: 10px;
+        }
+    
+        p {
+          color: #555;
+          margin-bottom: 30px;
+        }
+    
+        .button {
+          background: linear-gradient(45deg, #4CAF50, #81C784);
+          color: white;
+          border: none;
+          border-radius: 25px;
+          padding: 12px 24px;
+          margin: 10px;
+          font-size: 16px;
+          cursor: pointer;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: background 0.3s ease, transform 0.2s ease;
+        }
+    
+        .button:hover {
+          background: linear-gradient(45deg, #388E3C, #66BB6A);
+          transform: scale(1.05);
+        }
+      </style>
 </head>
+    
 <body>
     <h1>Добро пожаловать!</h1>
     <p>Это страница Екатерины Ч. и Марии С.</p>
-    <button onclick="sayHello()">Нажми меня</button>
+    <button class="button" onclick="sayHello()">Приветствие</button>
+    <button class="button" onclick="sayBye()">Нажмите при выходе</button>
 
     <script>
         function sayHello() {
             alert('Привет, мир!');
         }
+
+        function sayBye() {
+            alert('Пока-пока!');
+          }
     </script>
 </body>
 </html> 
